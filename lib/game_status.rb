@@ -23,20 +23,3 @@ def won?(board)
   end  
 end
 
-def full?(board)
-  board.all?{|answer| answer == "X" || answer = "O"}
-end
-
-def draw?(board)
-  full?(board) && !won?(board)
-end
-
-def over?(board)
-  full?(board) || won?(board)
-end
-
-def winner(board)
-  if win_combination = won?(board)
-    board[win_combination.first]
-  end
-end
